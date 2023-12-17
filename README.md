@@ -1,6 +1,6 @@
 # MimeTypes
 
-[![.NET CI/CD Workflow](https://github.com/frankhaugen/Frank.MimeTypes/actions/workflows/main.yml/badge.svg?branch=main&event=release)](https://github.com/frankhaugen/Frank.MimeTypes/actions/workflows/main.yml)
+[![.NET CI/CD Workflow](https://github.com/frankhaugen/Frank.MimeTypes/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/frankhaugen/Frank.MimeTypes/actions/workflows/main.yml)
 
 This library provides a simple way to get the mime type of a file extension or the file extension of a mime type.
 
