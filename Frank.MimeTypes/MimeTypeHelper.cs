@@ -7,7 +7,17 @@ public static class MimeTypeHelper
     public static MimeType GetMimeTypeFromFilename(string fileName) => MimeTypeCollection[Path.GetExtension(fileName)];
     public static MimeType GetMimeTypeFromExtension(string extension) => MimeTypeCollection[extension];
     
-    public static MimeType? GetMimeTypeFromMediaType(string mediaType) => MimeTypeCollection.FirstOrDefault(x => x.MediaType == mediaType);
-    
-    public static MimeType? GetMimeTypeFromName(string name) => MimeTypeCollection.FirstOrDefault(x => x.Name == name);
+    public static bool TryGetMimeTypeFromFile(FileInfo file, out MimeType? mimeType)
+    {
+        var result = MimeTypeCollection.FirstOrDefault(m => m.Extension == file.Extension);
+        if (result != null)
+        {
+            mimeType = result;
+            return true;
+        }
+        {
+            mimeType = null;
+            return false;
+        } 
+    }
 }
